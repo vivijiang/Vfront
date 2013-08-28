@@ -1,0 +1,53 @@
+﻿@using Vfront.Extensions
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/basicCss")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="wrap">
+
+        <!-- Begin page content -->
+        <header>
+            <div class="content-wrapper clearfix">
+                <div>
+                    <h1 id="sitetitle">@Html.ActionLink("Dev Center", "Index", "Home")</h1>
+                </div>
+                <div>
+@*                    <section id="login">
+                        @Html.Partial("_LoginPartial")
+                    </section>*@
+                    <nav>
+                        <ul class="nav nav-pills">
+                            <li class="@Html.GetCurrentTabCssClass("Home")">@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li class="@Html.GetCurrentTabCssClass("Knowledge")">@Html.ActionLink("Knowledge Sharing", "Index", "Knowledge")</li>
+                            <li class="@Html.GetCurrentTabCssClass("Team")">@Html.ActionLink("ITIS Team", "Index", "Team")</li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            <div class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </div>
+        </div>
+
+        <div id="push"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="muted credit">Powered by Bootstrap | Built by Vivi</p>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/basic")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
