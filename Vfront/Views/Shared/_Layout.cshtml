@@ -16,17 +16,15 @@
         <header>
             <div class="contentwrapper clearfix">
                 <div>
-                    <h1 id="sitetitle">@Html.ActionLink("Dev Center", "Index", "Home")</h1>
+                    <h1 id="sitetitle">@Html.ActionLink("Bootstrap Demo", "Index", "Home")</h1>
                 </div>
                 <div>
-                    @*                    <section id="login">
-                        @Html.Partial("_LoginPartial")
-                    </section>*@
                     <nav>
                         <ul class="nav nav-pills">
                             <li class="@Html.GetCurrentTabCssClass("Home")">@Html.ActionLink("Home", "Index", "Home")</li>
                             <li class="@Html.GetCurrentTabCssClass("Knowledge")">@Html.ActionLink("Knowledge Sharing", "Index", "Knowledge")</li>
-                            <li class="@Html.GetCurrentTabCssClass("Team")">@Html.ActionLink("ITIS Team", "Index", "Team")</li>
+                            <li class="@Html.GetCurrentTabCssClass("Ef")">@Html.ActionLink("ITIS Team", "Index", "Ef")</li>
+                            <li class="@Html.GetCurrentTabCssClass("Elastislide")">@Html.ActionLink("Elastislide", "Index", "Elastislide")</li>
                         </ul>
                     </nav>
                 </div>
@@ -41,11 +39,12 @@
 
     <footer>
         <div class="container">
-            <p class="muted credit">Powered by Bootstrap | Built by Vivi</p>
+            <p class="muted credit">Powered by Bootstrap | @Html.ActionLink("Developing Log", "About", "Home")</p>
         </div>
     </footer>
 
     @Scripts.Render("~/bundles/basic")
+    @RenderSection("loadResources", required: false)
     @RenderSection("scripts", required: false)
 </body>
 </html>
