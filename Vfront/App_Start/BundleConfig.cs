@@ -10,7 +10,8 @@ namespace Vfront
         {
             bundles.Add(new ScriptBundle("~/bundles/basic").Include(
                         "~/Scripts/jquery-{version}.js",
-                        "~/Scripts/bootstrap*"));
+                        "~/Scripts/bootstrap*",
+                        "~/Scripts/animatescroll.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
                         "~/Scripts/jquery-ui-{version}.js"));
@@ -28,7 +29,9 @@ namespace Vfront
                         "~/Content/css/bootstrap-min.css",
                         "~/Content/css/bootstrap-responsive-min.css",
                         "~/Content/font/foundation-icons.css",
-                        "~/Content/css/site.css"));
+                        "~/Content/css/site.css",
+                        "~/Content/css/site-animation.css",
+                        "~/Content/css/site-responsive.css"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",

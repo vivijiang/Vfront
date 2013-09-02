@@ -6,20 +6,20 @@
     <title>@ViewBag.Title - My ASP.NET MVC Application</title>
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel='stylesheet' type='text/css'>
     @Styles.Render("~/Content/basicCss")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <div id="wrap">
-
         <!-- Begin page content -->
         <header>
-            <div class="content-wrapper clearfix">
+            <div class="contentwrapper clearfix">
                 <div>
                     <h1 id="sitetitle">@Html.ActionLink("Dev Center", "Index", "Home")</h1>
                 </div>
                 <div>
-@*                    <section id="login">
+                    @*                    <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>*@
                     <nav>
@@ -33,9 +33,7 @@
             </div>
         </header>
         <div id="body">
-            <div class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </div>
+            @RenderBody()
         </div>
 
         <div id="push"></div>
